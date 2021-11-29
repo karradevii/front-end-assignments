@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Student Progress Card</title>
+
+	<!-- CSS Link -->
+		<link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
+		<style type="text/css">
+			.displayCard{
+				background-color: lightsteelblue;
+				/*color: gold;*/
+				margin-top: 50px;
+				margin-bottom: 30px;
+				padding-left: 20px;
+				padding-top: 30px;
+				padding-bottom: 30px;
+				border-bottom-right-radius: 6px;
+				border-top-left-radius: 6px;
+				border-bottom-left-radius: 6px;
+				border-top-right-radius: 6px;
+			}
+			p{
+				color: white;
+			}
+		</style>
+
+
+</head>
+<body>
+
+<div class="container my-5" style="background: lightblue;">
+      <div class="row">
+        <div class="col-6 mx-auto">
+          <h3>Student Progress Card</h3>
+
+          <form>
+			  <div class="form-group" style="margin-bottom: 20px;">
+			    <!-- <label for="exampleInputEmail1">Enter your Name</label> -->
+			    <input type="text" class="form-control" id="nameInput" placeholder="Enter your Name">
+			   </div>
+		  </form>
+
+          
+          	<div style="display: flex;">
+          		<div>
+          			<select class="form-select" id="SubjectOne" style="margin-bottom:20px">
+	          			<option value="">Select Subject 1</option>
+			            <option value="Telugu">Telugu</option>
+			            <option value="English">English</option>
+			            <option value="Hindi">Hindi</option>
+			            <option value="Maths">Maths</option>
+			            <option value="Science">Science</option>
+			            <option value="Social">Social</option>
+		         	</select>
+          		</div>
+          		<div class="form-group" style="margin-left: 10px; width: 100px;">
+          			<input type="number" class="form-control" id="marks1" placeholder="Marks">
+          		</div>
+          	</div>
+
+         	<div style="display: flex;">
+          		<div>
+          			<select class="form-select" id="SubjectTwo" style="margin-bottom:20px">
+	          			<option value="">Select Subject 2</option>
+			            <option value="Telugu">Telugu</option>
+			            <option value="English">English</option>
+			            <option value="Hindi">Hindi</option>
+			            <option value="Maths">Maths</option>
+			            <option value="Science">Science</option>
+			            <option value="Social">Social</option>
+		         	</select>
+          		</div>
+          		<div class="form-group" style="margin-left: 10px; width: 100px;">
+          			<input type="number" class="form-control" id="marks2" placeholder="Marks">
+          		</div>
+          	</div>
+
+        	<div style="display: flex;">
+          		<div>
+          			<select class="form-select" id="SubjectThree" style="margin-bottom:20px" required>
+	          			<option value="">Select Subject 3</option>
+			            <option value="Telugu">Telugu</option>
+			            <option value="English">English</option>
+			            <option value="Hindi">Hindi</option>
+			            <option value="Maths">Maths</option>
+			            <option value="Science">Science</option>
+			            <option value="Social">Social</option>
+		         	</select>
+          		</div>
+          		<div class="form-group" style="margin-left: 10px; width: 100px;">
+          			<input type="number" class="form-control" id="marks3" placeholder="Marks" required>
+          		</div>
+          	</div>
+
+          	<div style="display: flex;">
+          		<div>
+          			<select class="form-select" id="SubjectFour" style="margin-bottom:20px">
+	          			<option value="">Select Subject 4</option>
+			            <option value="Telugu">Telugu</option>
+			            <option value="English">English</option>
+			            <option value="Hindi">Hindi</option>
+			            <option value="Maths">Maths</option>
+			            <option value="Science">Science</option>
+			            <option value="Social">Social</option>
+		         	</select>
+          		</div>
+          		<div class="form-group" style="margin-left: 10px; width: 100px;">
+          			<input type="number" class="form-control" id="marks4" placeholder="Marks">
+          		</div>
+          	</div>
+
+          	<div style="display: flex;">
+          		<div>
+          			<select class="form-select" id="SubjectFive" style="margin-bottom:20px">
+	          			<option value="">Select Subject 5</option>
+			            <option value="Telugu">Telugu</option>
+			            <option value="English">English</option>
+			            <option value="Hindi">Hindi</option>
+			            <option value="Maths">Maths</option>
+			            <option value="Science">Science</option>
+			            <option value="Social">Social</option>
+		         	</select>
+          		</div>
+          		<div class="form-group" style="margin-left: 10px; width: 100px;">
+          			<input type="number" class="form-control" id="marks5" placeholder="Marks">
+          		</div>
+          	</div>
+
+          	<div style="display: flex;">
+          		<div>
+          			<select class="form-select" id="SubjectSix" style="margin-bottom:20px">
+	          			<option value="">Select Subject 6</option>
+			            <option value="Telugu">Telugu</option>
+			            <option value="English">English</option>
+			            <option value="Hindi">Hindi</option>
+			            <option value="Maths">Maths</option>
+			            <option value="Science">Science</option>
+			            <option value="Social">Social</option>
+		         	</select>
+          		</div>
+          		<div class="form-group" style="margin-left: 10px; width: 100px;">
+          			<input type="number" class="form-control" id="marks6" placeholder="Marks">
+          		</div>
+          	</div>
+
+          	<button type="button" class="btn btn-primary mt-2" id = "submitButton">Submit</button>
+          	<div class = "displayCard">
+          		<p id = "name" style="margin-top: 20px;"></p>
+	          	<p id = "result" style="margin-top: 20px;"></p>
+	          	<p id = "result2" style="margin-top: 20px;"></p>
+							<p id = "result3" style="margin-top:20px;"></p>
+							<p id = "result4" style="margin-top:20px;"></p>
+							<p id = "result5" style="margin-top:20px;"></p>
+							<p id = "result6" style="margin-top:20px;"></p>
+							<p id = "totalresult" style="margin-top:20px;"></p>
+							<p id = "grade" style="margin-top:20px;"></p>
+							<p id = "status" style="margin-top:20px;"></p>
+          	</div>
+          	
+          
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+	
+		var submitButtonElement = document.getElementById("submitButton");
+		submitButtonElement.addEventListener("click",displayDetails);
+
+
+		function displayDetails(){
+
+
+			var firstSubjectName =  document.getElementById("SubjectOne").value;
+			var firstSubjectMarks = document.getElementById("marks1").value;
+			console.log(firstSubjectName);
+			var firstSubjectresult = document.getElementById("result");
+
+
+			var secondSubjectName =  document.getElementById("SubjectTwo").value;
+			var secondSubjectMarks = document.getElementById("marks2").value;
+			console.log(secondSubjectName);
+			var secondSubjectresult = document.getElementById("result2");
+
+
+			var thirdSubjectName =  document.getElementById("SubjectThree").value;
+			var thirdSubjectMarks = document.getElementById("marks3").value;
+			console.log(secondSubjectName);
+			var thirdSubjectresult = document.getElementById("result3");
+
+			var fourSubjectName =  document.getElementById("SubjectFour").value;
+			var fourSubjectMarks = document.getElementById("marks4").value;
+			console.log(secondSubjectName);
+			var fourSubjectresult = document.getElementById("result4");
+
+			var fiveSubjectName =  document.getElementById("SubjectFive").value;
+			var fiveSubjectMarks = document.getElementById("marks5").value;
+			console.log(fiveSubjectName);
+			var fiveSubjectresult = document.getElementById("result5");
+
+
+			var sixSubjectName =  document.getElementById("SubjectSix").value;
+			var sixSubjectMarks = document.getElementById("marks6").value;
+			console.log(fiveSubjectName);
+			var sixSubjectresult = document.getElementById("result6");
+
+			var totalMaarks = document.getElementById("totalresult");
+			var gradeElement = document.getElementById("grade");
+			var statusElement = document.getElementById("status");
+
+			var nameElement = document.getElementById("nameInput").value;
+			console.log(nameElement);
+			var name = document.getElementById("name");
+
+			if(!nameElement || !firstSubjectName || !secondSubjectName || !thirdSubjectName || !fourSubjectName || !fiveSubjectName || !sixSubjectName || !firstSubjectMarks || !secondSubjectMarks || !thirdSubjectMarks || !fourSubjectMarks || !fiveSubjectMarks || !sixSubjectMarks){
+				alert("Please fill all the fields.");
+				// return;
+			}
+
+			 if((firstSubjectMarks >100)||(firstSubjectMarks < 1)||(secondSubjectMarks >100)||(secondSubjectMarks < 1)||(thirdSubjectMarks >100)||(thirdSubjectMarks < 1)||(fourSubjectMarks >100)||(fourSubjectMarks < 1)||(fiveSubjectMarks >100)||(fiveSubjectMarks < 1)||(sixSubjectMarks >100)||(sixSubjectMarks < 1)){
+				alert("Marks should between 1-100");
+				// return;
+			}
+
+
+			name.innerText =nameElement.toUpperCase();
+			firstSubjectresult.innerText = firstSubjectName+" : "+firstSubjectMarks;
+			secondSubjectresult.innerText = secondSubjectName+" : "+secondSubjectMarks;
+			thirdSubjectresult.innerText = thirdSubjectName+" : "+thirdSubjectMarks;
+			fourSubjectresult.innerText = fourSubjectName+" : "+fourSubjectMarks;
+			fiveSubjectresult.innerText = fiveSubjectName+" : "+fiveSubjectMarks;
+			sixSubjectresult.innerText = sixSubjectName+" : "+sixSubjectMarks;
+
+
+		// TOTAL MARKS
+
+			var fullmarks = +firstSubjectMarks + +secondSubjectMarks + +thirdSubjectMarks + +fourSubjectMarks + +fiveSubjectMarks + +sixSubjectMarks;
+			totalMaarks.innerText = "Total Marks: " + fullmarks+"/600";
+
+
+
+			//Grades
+
+			 if(fullmarks > 580){
+			 	gradeElement.innerText = "Grade: A";
+			 }
+			 if(fullmarks > 500 && fullmarks <579){
+			 	gradeElement.innerText = "Grade: B";
+			 }
+			 if(fullmarks > 499 && fullmarks < 450){
+			 	gradeElement.innerText = "Grade: C";
+			 }
+			 if(fullmarks > 400 && fullmarks < 449){
+			 	gradeElement.innerText = "Grade: D";
+			 }
+			 if(fullmarks > 350 && fullmarks < 399){
+			 	gradeElement.innerText = "Grade: E";
+			 }
+			 if(fullmarks < 349){
+			 	gradeElement.innerText = "Grade: F";
+			 }
+
+
+			 // STATUS of the student
+
+			 if(fullmarks <= 349){
+			 	statusElement.innerText = "STATUS: Failed";
+			 }
+			 if(fullmarks > 350){
+			 	statusElement.innerText = "STATUS: Passed";
+			 }
+
+
+		 }
+
+
+
+    </script>
+
+</body>
+</html>
