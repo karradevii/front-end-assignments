@@ -241,32 +241,32 @@
 
 			//Grades
 
-			 if(fullmarks > 580){
+			 if(fullmarks >= 580){
 			 	gradeElement.innerText = "Grade: A";
 			 }
-			 if(fullmarks > 500 && fullmarks <579){
+			 if(fullmarks >= 500 && fullmarks <=579){
 			 	gradeElement.innerText = "Grade: B";
 			 }
-			 if(fullmarks > 499 && fullmarks < 450){
+			 if(fullmarks >= 450 && fullmarks < 500){
 			 	gradeElement.innerText = "Grade: C";
 			 }
-			 if(fullmarks > 400 && fullmarks < 449){
+			 if(fullmarks >= 400 && fullmarks < 450){
 			 	gradeElement.innerText = "Grade: D";
 			 }
-			 if(fullmarks > 350 && fullmarks < 399){
+			 if(fullmarks >= 350 && fullmarks < 400){
 			 	gradeElement.innerText = "Grade: E";
 			 }
-			 if(fullmarks < 349){
+			 if(fullmarks < 350){
 			 	gradeElement.innerText = "Grade: F";
 			 }
 
 
 			 // STATUS of the student
 
-			 if(fullmarks <= 349){
+			 if(fullmarks < 350){
 			 	statusElement.innerText = "STATUS: Failed";
 			 }
-			 if(fullmarks > 350){
+			 if(fullmarks >= 350){
 			 	statusElement.innerText = "STATUS: Passed";
 			 }
 
